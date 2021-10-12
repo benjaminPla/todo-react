@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Today from "./Today.js";
+import Header from "./Header.js";
+import Inputs from "./Inputs.js";
+import Notification from "./Notification.js";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function App() {
+  return (
+    <div>
+      <div className="App">
+        <Today />
+        <Header text="TODO" />
+        <Inputs placeholder="New Task" />
+      </div>
+      <Notification text="Notification" />
+    </div>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById("root"));
