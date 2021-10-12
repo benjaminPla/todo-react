@@ -22,13 +22,21 @@ export default class Inputs extends Component {
   render() {
     return (
       <div>
-        <input type="text" onChange={this.handleChange}></input>
-        <ol>
+        <div className="input-group mb-3">
+          <input type="text" className="form-control" onChange={this.handleChange} />
+          <button className="input-group-text" onClick={this.handleClick}>
+            +
+          </button>
+        </div>
+        <ol className="list-unstyled">
           {this.state.tasks.map((task, index) => {
-            return <li key={index}>{task}</li>;
+            return (
+              <li className="text-capitalize" key={index}>
+                {index + 1 + ". " + task}
+              </li>
+            );
           })}
         </ol>
-        <button onClick={this.handleClick}>+</button>
       </div>
     );
   }
