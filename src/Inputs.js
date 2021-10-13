@@ -44,12 +44,14 @@ export default class Inputs extends Component {
       tasks: this.state.tasks,
       success: "success",
       message: "Successfully deleted task: " + target.id.split("-")[1],
+      display: "inline-block",
     });
+    this.display();
   }
   display() {
     setTimeout(() => {
       this.setState({ display: "none" });
-    }, 1000);
+    }, 2000);
   }
   render() {
     return (
