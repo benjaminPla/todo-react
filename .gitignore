@@ -20,6 +20,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#styles
+#styles - NOT WORKING
 Inputs.scss
 Inputs.css.map
