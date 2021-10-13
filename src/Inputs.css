@@ -1,0 +1,13 @@
+.fas:hover {
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.notification {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=Inputs.css.map */
