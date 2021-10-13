@@ -91,11 +91,25 @@ export default class Inputs extends Component {
           })}
         </ol>
         <div
-          className={"notification alert alert-" + this.state.success + " opacity-" + this.state.opacity + " w-100"}
+          className={
+            "notification alert alert-" +
+            this.state.success +
+            " opacity-" +
+            this.state.opacity +
+            " w-100"
+          }
         >
           <i className="fas fa-exclamation"></i> {this.state.message}
         </div>
       </div>
     );
+  }
+  async componentDidMount() {
+    const tasks = await fetch("http://localhost:4000/getAll").then((res) => res.json());
+    tasks.body.map((task) => {
+      this.setState({
+        tasks: [...this.state.tasks, task.task],
+      });
+    });
   }
 }
